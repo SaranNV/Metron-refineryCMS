@@ -1,0 +1,12 @@
+<div class="row margin_zero" style="background: #f1f1f1">
+  <div class="col-md-9">
+    <h1 id='logo'>
+      <%#= link_to Refinery::Core.site_name, refinery.root_path %>
+      <img src="/images/metron_logo.png">
+    </h1>
+  </div>
+  <div class="col-md-3" style="padding-top: 30px">
+    <div><span><img src="/images/mail_icon.png"></span><b style="  padding-left: 10px;">info@metronconsulting.com</b></div>
+    <div><span><img src="/images/mobile_icon.png"></span><b style="  padding-left: 10px;">1800-796-0478</b></div>
+  </div></div>
+<%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>

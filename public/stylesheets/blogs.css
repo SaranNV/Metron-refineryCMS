@@ -1,0 +1,151 @@
+.blog{
+    margin-top: -7px;
+    width: 100%;
+}
+.blog .header-bar .twitter-box {
+    display: inline;
+    float: right;
+    text-align: right;
+    margin-top: 25px;
+}
+.blog .header-bar {
+    position: relative;
+    background-color: #f6f6f6;
+}
+.header-bar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    -webkit-transition: background-color, 0.5s;
+    -moz-transition: background-color, 0.5s;
+    transition: background-color, 0.5s;
+    min-height: 80px;
+    padding: 0;
+    z-index: 50;
+}
+header, .hgroup, nav, section, summary {
+    display: block;
+}
+.blog .header-bar .container {
+    width: 90%;
+    padding: 0;
+    text-align: center;
+}
+
+.blog .container {
+    width: 90%;
+    padding: 0 0 75px;
+    max-width: 770px;
+}
+
+.container {
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 20px 75px 20px;
+}
+
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.blog .header-bar .back-home {
+    margin-top: 25px;
+    display: inline;
+    float: left;
+}
+.header-bar p {
+    margin-top: 0;
+    -webkit-padding-start: 0px;
+}
+.header-bar a {
+    color: #0099cc;
+}
+.logo a {
+    overflow: hidden;
+    height: 22px;
+}
+
+a {
+    color: #888888;
+    text-decoration: none;
+}
+.logo a:before {
+    content: "";
+    display: block;
+    width: 0;
+    /*height: 100%;*/
+}
+
+.blog article {
+    padding: 60px 0 25px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+article{
+    display: block;
+}
+.blog article header {
+    text-align: center;
+}
+header{
+    display:block;
+}
+.blog-section h1{
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-size: 1.875rem;
+}
+h1{
+    margin: 0 0 20px;
+    line-height: 1em;
+}
+.blog article header h6 {
+    color: #888888;
+}
+.blog-section h6{
+    margin-bottom: 30px;
+}
+h6 {
+    font-size: 1rem;
+}
+.shared-headings, h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 20px;
+    line-height: 1em;
+    font-weight: 300;
+}
+.blog-section p {
+    line-height: 1.75em;
+    margin-bottom: 30px;
+}
+.blog .header-bar .logo {
+    text-align: center;
+    height: 22px;
+    width: 150px;
+    margin: 25px auto 0;
+    display: inline;
+    float: center;
+    display: inline-block;
+}
+.logo {
+    display: inline;
+    float: left;
+    position: relative;
+    margin-top: 31px;
+    z-index: 3;
+    margin-left: 20px;
+}
+.blog article .index-summary a img {
+    width: 100%;
+}
+.blog article header h1 a {
+    text-decoration: none;
+    color: #000;
+}
+.blog article header h1 a:hover {
+    color: #04467E;
+}

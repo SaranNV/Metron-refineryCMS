@@ -1,0 +1,103 @@
+.footer {
+    background: #141414;
+    color: #f6f6f6;
+    font-size: 15px;
+    line-height: 9.35mm;
+}
+.footer-section {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 32%;
+    text-align: left;
+}
+.footer a {
+    display: block;
+}
+
+.footer .container {
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 75px 20px 75px 20px;
+}
+
+.footer p {
+    margin: .5em 0 1em;
+}
+
+.footer a {
+    color: white; text-decoration: none;
+}
+
+.footer .footer-contact h4 {
+    color: #888888;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin: 0 0 20px;
+    line-height: 1em;
+    font-weight: 300;
+}
+
+.footer .footer-section ul li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+}
+
+ul.social-networks li {
+    margin-right: 10px;
+}
+.footer .footer-contact ul.social-networks {
+    padding-top: 10px;
+}
+.footer .footer-section .footer-section-title a, .footer .footer-section .blog-post-date a, .footer .footer-section .tweet-date a, .footer .footer-section ul.social-networks a {
+    color: #888888;
+}
+.footer .footer-contact ul.social-networks {
+    padding-top: 10px;
+    padding-left: 0px;
+}
+
+.footer .social-networks {
+    display: inline-flex;
+}
+
+
+.section a:hover, .section-white a:hover, .submenu-section a:hover, .home-services-section a:hover, .about-section a:hover, .slider-section a:hover, .services-webdevelopment-section a:hover, .open-source-section a:hover, .project-description-section a:hover, .work-with-us-section a:hover, .other-jobs-section a:hover, .contact-us-top-section a:hover, .contact-us-main-section a:hover, .pre-footer a:hover, .section-grey-light a:hover, .team-section a:hover, .services-ecommerce-section a:hover, .services-marketing-section a:hover, .projects-section a:hover, .home-projects-section a:hover, .clients-section a:hover, .project-images-section a:hover, .jobs-section a:hover, .section-blue a:hover, .careers-section a:hover, .services-spree-section a:hover, .services-ror-section a:hover, .section-grey-dark a:hover, .footer a:hover, .home-top-section a:hover, .about-top-section a:hover, .services-top-section a:hover, .services-webdesign-section a:hover, .projects-top-section a:hover, .project-top-section a:hover, .jobs-top-section a:hover, .job-top-section a:hover, .contact-us-map-section a:hover {
+    text-decoration: none;
+}
+
+.blogs {
+    margin-left: -37px;
+}
+
+.footer-tweet {
+    margin-left: -37px;
+}
+
+.blogs a:hover {
+    color: white;
+}
+
+.footer-tweet a:hover{
+    color: white;
+}
+.footer-contact a:hover{
+    color: white;
+}
+.footer .footer-section .footer-section-title, .footer .footer-section .blog-post-date, .footer .footer-section .tweet-date, .footer .footer-section ul.social-networks {
+    color: #888888;
+}
+
+html {
+    font-family: "museo-sans", sans-serif;
+    font-weight: 300;
+    line-height: 1.75em;
+    -webkit-font-smoothing: antialiased;
+    color: #141414;
+    font-size: 100%;
+}
+
+

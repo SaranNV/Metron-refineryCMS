@@ -1,0 +1,350 @@
+.submenu-section .container {
+    padding: 40px 0;
+}
+.submenu-section {
+    text-align: center;
+}
+.submenu-section ul, .submenu-section ul li {
+    margin: 0px;
+    padding: 0px;
+    display: inline;
+}
+
+.submenu-section ul {
+    list-style-type: none;
+    color: #888888;
+}
+.submenu-section ul li {
+    margin: 10px;
+    padding: 0px;
+    display: inline;
+}
+
+.submenu-section ul li:after {
+    content: "|";
+    margin: 10px;
+}
+
+ul li:last-child:after {
+    content: "";
+}
+
+
+.submenu-section ul li a {
+    color: #888888;
+    margin: 0 15px;
+}
+
+.header{
+    padding-bottom: 60px;
+}
+
+.services-ecommerce-section{
+    background-color: #f6f6f6;
+    text-align: center;
+}
+
+.services-ecommerce-section .mobile-shopping, .services-ecommerce-section .products-migration, .services-ecommerce-section .inventory-integration {
+    float: left;
+    display: block;
+    margin-right: 2%;
+    width: 32%;
+}
+
+.svg-icon, .notifications .notification:before, .nav-toggle, .logo a, .projects-section .projects-list li .project-image, .home-projects-section .projects-list li .project-image {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    width: 200px;
+    height: 165px;
+}
+
+.mobile_shopping-icon {
+    background: url("/images/mobile_shopping.png") no-repeat top left;
+    background-image: url("/images/mobile_shopping_svg.svg"), none;
+    background-size: contain;
+}
+
+.products_migration-icon {
+    background: url("/images/products_migration.png") no-repeat top left;
+    background-image: url("/images/products_migration_svg.svg"),none;
+    background-size: contain;
+}
+
+.services-ecommerce-section .mobile-shopping:last-child, .services-ecommerce-section .products-migration:last-child, .services-ecommerce-section .inventory-integration:last-child {
+    margin-right: 0;
+}
+
+.inventory_integration-icon {
+    background: url("/images/inventory_integration.png") no-repeat top left;
+    background-image: url("/images/inventory_integration_svg.svg"),none;
+    background-size: contain;
+}
+.services-webdesign-section {
+    padding: 0px 0;
+    text-align: center;
+}
+
+.services-webdesign-section {
+    color: white;
+    background-color: #013c50;
+    background-image: url("/images/web_design_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.services-webdesign-section .uiux-design, .services-webdesign-section .responsive, .services-webdesign-section .branding {
+    float: left;
+    display: block;
+    margin-right: 2%;
+    width: 32%;
+}
+.ui_ux-icon {
+    background: url("/images/ui_ux.png") no-repeat top left;
+    background-image: url("/images/ui_ux_svg.svg"),none;
+    background-size: contain;
+}
+
+.rwd-icon {
+    background: url("/images/rwd.png") no-repeat top left;
+    background-image: url("/images/rwd_svg.svg"),none;
+    background-size: contain;
+}
+.services-webdesign-section .uiux-design:last-child, .services-webdesign-section .responsive:last-child, .services-webdesign-section .branding:last-child {
+    margin-right: 0;
+}
+.branding-icon {
+    background: url("/images/branding.png") no-repeat top left;
+    background-image: url("/images/branding_svg.svg"),none;
+    background-size: contain;
+}
+
+.format {
+    margin-top: 25px;
+    font-size: 20px;
+}
+.header {
+    float: left;
+    display: block;
+    margin-right: 2%;
+    width: 70%;
+    margin-left: 14.5%;
+}
+.services-webdevelopment-section{
+    text-align: center;
+}
+
+.services-webdevelopment-section .cms, .services-webdevelopment-section .maintenance, .services-webdevelopment-section .testing, .services-webdevelopment-section .ember {
+    float: left;
+    display: block;
+    margin-right: 2%;
+    width: 49%;
+}
+.with-left-images .sub-image, .services-webdevelopment-section .sub-image, .services-marketing-section .sub-image {
+    float: left;
+    display: block;
+    margin-right: 4.08163%;
+    width: 30.61224%;
+}
+.cms-icon {
+    background: url("/images/cms.png") no-repeat top left;
+    background-image: url("/images/cms_svg.svg"),none;
+    background-size: contain;
+}
+.with-left-images .sub-text:last-child, .services-webdevelopment-section .sub-text:last-child, .services-marketing-section .sub-text:last-child {
+    margin-right: 0;
+}
+
+.services-webdevelopment-section h4{
+    margin-top: 20px;
+}
+
+.shared-headings, h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 20px;
+    line-height: 1em;
+    font-weight: 300;
+}
+
+.services-webdevelopment-section .maintenance {
+    margin-right: 0;
+}
+.with-small-icons .svg-icon, .home-services-section .svg-icon, .with-left-images .svg-icon, .services-webdevelopment-section .svg-icon, .services-marketing-section .svg-icon, .services-ecommerce-section .svg-icon, .services-webdesign-section .svg-icon, .open-source-section .svg-icon, .with-small-icons .notifications .notification:before, .notifications .with-small-icons .notification:before, .home-services-section .notifications .notification:before, .notifications .home-services-section .notification:before, .with-left-images .notifications .notification:before, .notifications .with-left-images .notification:before, .services-webdevelopment-section .notifications .notification:before, .notifications .services-webdevelopment-section .notification:before, .services-marketing-section .notifications .notification:before, .notifications .services-marketing-section .notification:before, .services-ecommerce-section .notifications .notification:before, .notifications .services-ecommerce-section .notification:before, .services-webdesign-section .notifications .notification:before, .notifications .services-webdesign-section .notification:before, .open-source-section .notifications .notification:before, .notifications .open-source-section .notification:before, .with-small-icons .nav-toggle, .home-services-section .nav-toggle, .with-left-images .nav-toggle, .services-webdevelopment-section .nav-toggle, .services-marketing-section .nav-toggle, .services-ecommerce-section .nav-toggle, .services-webdesign-section .nav-toggle, .open-source-section .nav-toggle, .with-small-icons .logo a, .logo .with-small-icons a, .home-services-section .logo a, .logo .home-services-section a, .with-left-images .logo a, .logo .with-left-images a, .services-webdevelopment-section .logo a, .logo .services-webdevelopment-section a, .services-marketing-section .logo a, .logo .services-marketing-section a, .services-ecommerce-section .logo a, .logo .services-ecommerce-section a, .services-webdesign-section .logo a, .logo .services-webdesign-section a, .open-source-section .logo a, .logo .open-source-section a, .with-small-icons .projects-section .projects-list li .project-image, .projects-section .projects-list li .with-small-icons .project-image, .home-services-section .projects-section .projects-list li .project-image, .projects-section .projects-list li .home-services-section .project-image, .with-left-images .projects-section .projects-list li .project-image, .projects-section .projects-list li .with-left-images .project-image, .services-webdevelopment-section .projects-section .projects-list li .project-image, .projects-section .projects-list li .services-webdevelopment-section .project-image, .services-marketing-section .projects-section .projects-list li .project-image, .projects-section .projects-list li .services-marketing-section .project-image, .services-ecommerce-section .projects-section .projects-list li .project-image, .projects-section .projects-list li .services-ecommerce-section .project-image, .services-webdesign-section .projects-section .projects-list li .project-image, .projects-section .projects-list li .services-webdesign-section .project-image, .open-source-section .projects-section .projects-list li .project-image, .projects-section .projects-list li .open-source-section .project-image, .with-small-icons .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .with-small-icons .project-image, .home-services-section .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .home-services-section .project-image, .with-left-images .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .with-left-images .project-image, .services-webdevelopment-section .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .services-webdevelopment-section .project-image, .services-marketing-section .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .services-marketing-section .project-image, .services-ecommerce-section .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .services-ecommerce-section .project-image, .services-webdesign-section .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .services-webdesign-section .project-image, .open-source-section .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .open-source-section .project-image {
+    width: 150px;
+}
+.maintenance-icon {
+    background: url("/images/maintenance.png") no-repeat top left;
+    background-image: url("/images/maintenance_svg.svg"),none;
+    background-size: contain;
+}
+
+.services-webdevelopment-section .testing {
+    margin-top: 100px;
+}
+
+.testing-icon {
+    background: url("/images/testing.png") no-repeat top left;
+    background-image: url("/images/testing_svg.svg"),none;
+    background-size: contain;
+}
+.services-webdevelopment-section .ember:last-child {
+    margin-right: 0;
+}
+.services-webdevelopment-section .ember {
+    margin-right: 0;
+    margin-top: 100px;
+}
+.ember-icon {
+    background: url("/images/ember.png") no-repeat top left;
+    background-image: url("/images/ember_svg.svg"),none;
+    background-size: contain;
+}
+
+.with-left-images .sub-text, .services-webdevelopment-section .sub-text, .services-marketing-section .sub-text {
+    float: left;
+    display: block;
+    margin-right: 4.08163%;
+    width: 65.30612%;
+}
+
+.services-ror-section .ror-image {
+    float: left;
+    display: block;
+    margin-right: 2%;
+    width: 49%;
+}
+
+.section-blue, .careers-section, .services-spree-section, .services-ror-section {
+    background: #0099cc;
+    color: white;
+}
+
+.ruby-icon {
+    background: url("/images/ruby.png") no-repeat top left;
+    background-image: url("/images/ruby_svg.svg"),none;
+    background-size: contain;
+}
+.services-ror-section .ror-description:last-child {
+    margin-right: 0;
+}
+.services-ror-section .ror-description {
+    float: left;
+    display: block;
+    margin-right: 2%;
+    width: 49%;
+}
+.services-ror-section .ror-description {
+    text-align: left;
+}
+.services-ror-section h2+p{
+    font-size: 1.2rem;
+    line-height: 1.6875em;
+}
+.services-marketing-section h2+p{
+    /*font-size: 1.125rem;*/
+    line-height: 1.6875em;
+}
+.services-marketing-section .ppc-marketing, .services-marketing-section .seo-marketing, .services-marketing-section .social-media-marketing, .services-marketing-section .email-marketing {
+    float: left;
+    display: block;
+    margin-right: 2%;
+    width: 49%;
+}
+.services-marketing-section .sub-image{
+    float: left;
+    display: block;
+    margin-right: 4.08163%;
+    width: 30.61224%;
+}
+
+.ppc-icon {
+    background: url("/images/ppc.png") no-repeat top left;
+    background-image: url("/images/ppc_svg.svg"),none;
+    background-size: contain;
+}
+.services-marketing-section .sub-text:last-child {
+    margin-right: 0;
+}
+.services-marketing-section .sub-text {
+    float: left;
+    display: block;
+    margin-right: 4.08163%;
+    width: 65.30612%;
+}
+.services-marketing-section .sub-text{
+    text-align: left;
+}
+.services-marketing-section {
+    background-color: rgb(242, 241, 239);
+}
+.services-marketing-section .seo-marketing {
+    float: left;
+    display: block;
+    margin-right: 0;
+    width: 49%;
+}
+
+.services-marketing-section{
+    text-align: center;
+}
+.seo-icon {
+    background: url("/images/seo.png") no-repeat top left;
+    background-image: url("/images/seo_svg.svg"),none;
+    background-size: contain;
+}
+.services-marketing-section .social-media-marketing {
+    margin-top: 100px;
+}
+.social_media-icon {
+    background: url("/images/social_media.png") no-repeat top left;
+    background-image: url("/images/social_media_svg.svg"),none;
+    background-size: contain;
+}
+.services-marketing-section .email-marketing:last-child {
+    margin-right: 0;
+}
+.email_marketing-icon {
+    background: url("/images/email_marketing.png") no-repeat top left;
+    background-image: url("/images/email_marketing_svg.svg"),none;
+    background-size: contain;
+}
+
+.services-marketing-section .email-marketing:last-child {
+    margin-right: 0;
+}
+.services-marketing-section .email-marketing {
+    margin-right: 0;
+    margin-top: 100px;
+}
+.services-marketing-section .email-marketing {
+    float: left;
+    display: block;
+    margin-right: 2%;
+    width: 49%;
+}
+
+.services-spree-section{
+    text-align: center;
+}
+.services-spree-section .spree-description, .services-ror-section .ror-description {
+    line-height: 1.6875em;
+}
+.services-spree-section .spree-image:last-child {
+    margin-right: 0;
+}
+.spree-image {
+    display: block;
+    width: 100%;
+    height: 270px;
+    background-image: url("/images/spree_partnership.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.services-spree-section .spree-description {
+    float: left;
+    display: block;
+    margin-right: 2%;
+    width: 49%;
+}
+.services-spree-section .spree-description{
+    text-align: left;
+}
