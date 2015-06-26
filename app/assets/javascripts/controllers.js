@@ -94,4 +94,92 @@ $(window).scroll(function(){
     }
 });
 
+//contact_us ajax javascript functions
+var $form = $(".contact_form");
+$( "#contact_us_name" ).keypress(function() {
+    $(".name_required").css("display","none");
+});
+$( "#contact_us_email" ).keypress(function() {
+    $(".email_required").css("display","none");
+});
+$( "#contact_us_message" ).keypress(function() {
+    $(".message_required").css("display","none");
+});
+$('.close-modal').on('click',function(){
+    $(".notifications").css("display","none");
+    $("#overlay").css("display","none");
+});
+$('#detail_submit').on('click',function(){
+    var name = $("#contact_us_name").val();
+    var email = $("#contact_us_email").val();
+    var message = $("#contact_us_message").val();
+    if(name === "" && email=== "" && message === "" ){
+        $(".name_required").css("display","block");
+        $(".email_required").css("display","block");
+        $(".message_required").css("display","block");
+    }else if(name === "" && email=== ""){
+        $(".name_required").css("display","block");
+        $(".email_required").css("display","block");
+    }else if(email === "" && message === "" ){
+        $(".email_required").css("display","block");
+        $(".message_required").css("display","block");
+    }else if(message === "" && name === ""  ){
+        $(".name_required").css("display","block");
+        $(".message_required").css("display","block");
+    }else if(name === ""){
+        $(".name_required").css("display","block");
+    }else if(email === ""){
+        $(".email_required").css("display","block");
+    }else if(message === "") {
+        $(".message_required").css("display", "block");
+    }else{
+        $("#overlay").show();
+        $("#theImg").show();
+        $.ajax({
+            type: "POST",
+            url: $form.attr('action'),
+            data:{
+                client_name: name,
+                client_email: email,
+                client_message: message
+            },
+            success: function(data) {
+                $("#theImg").hide();
+                $(".notifications").show();
+                $("#overlay").show();
+                document.getElementById('contact_us_name').value = "";
+                document.getElementById('contact_us_email').value = "";
+                document.getElementById('contact_us_message').value = "";
+            },
+            error: function(data){
+                alert(JSON.parse(xhr.responseText).Message);
+            }
+        });
+    }
+});
+//contact-us validate_email
+function validateEmail(email) {
+
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    var validation = $(".invalid-email");
+    var txt_email_value = $("#contact_us_email").val();
+
+    if (reg.test(txt_email_value) == false)
+    {
+        validation.css("display","block");
+        return false;
+    }
+    validation.css("display","none");
+    return true;
+
+}
+$(".close-modal").on('click',function(){
+    $(".notifications").css("display","none");
+    $("#overlay").css("display","none");
+});
+
+$( document ).ready(function() {
+    twttr.widgets.load();
+});
+
 //}]);
