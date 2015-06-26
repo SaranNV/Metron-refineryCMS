@@ -178,8 +178,51 @@ $(".close-modal").on('click',function(){
     $("#overlay").css("display","none");
 });
 
+//$( document ).ready(function() {
+//    twttr.widgets.load();
+//});
+
+
+//geo map javascript
+
 $( document ).ready(function() {
-    twttr.widgets.load();
+
+    if (navigator.geolocation)
+    {
+        navigator.geolocation.getCurrentPosition(showCurrentLocation);
+    }
+    else
+    {
+        alert("Geolocation API not supported.");
+    }
+
+    function showCurrentLocation(position)
+    {
+        var latitude = 38.107419800000000000;
+        var longitude = -122.569703199999990000;
+        var coords = new google.maps.LatLng(latitude, longitude);
+
+        var mapOptions = {
+            zoom: 15,
+            center: coords,
+            mapTypeControl: true,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        //create the map, and place it in the HTML map div
+        map = new google.maps.Map(
+            document.getElementById("mapPlaceholder"), mapOptions
+        );
+
+        //place the initial marker
+        var marker = new google.maps.Marker({
+            position: coords,
+            map: map,
+            title: "Current location!"
+        });
+    }
 });
+
+
 
 //}]);
