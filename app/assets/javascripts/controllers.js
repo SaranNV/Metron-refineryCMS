@@ -186,41 +186,29 @@ $(".close-modal").on('click',function(){
 //geo map javascript
 
 $( document ).ready(function() {
-
-    if (navigator.geolocation)
-    {
-        navigator.geolocation.getCurrentPosition(showCurrentLocation);
-    }
-    else
-    {
-        alert("Geolocation API not supported.");
-    }
-
-    function showCurrentLocation(position)
-    {
-        var latitude = 38.107419800000000000;
-        var longitude = -122.569703199999990000;
+    function initialize() {
+        var latitude = $('#location-canvas').attr('data-parameter1');
+        var longitude = $('#location-canvas').attr('data-parameter2');
         var coords = new google.maps.LatLng(latitude, longitude);
 
         var mapOptions = {
-            zoom: 15,
+            zoom: 9,
             center: coords,
-            mapTypeControl: true,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            mapTypeId: google.maps.MapTypeId.TERRAIN
         };
 
-        //create the map, and place it in the HTML map div
-        var map = new google.maps.Map(
-            document.getElementById("mapPlaceholder"), mapOptions
-        );
+        var map = new google.maps.Map(document.getElementById('location-canvas'),
+            mapOptions);
 
-        //place the initial marker
         var marker = new google.maps.Marker({
-            position: coords,
             map: map,
-            title: "Current location!"
+            draggable: false,
+            position: coords
         });
     }
+    google.maps.event.addDomListener(window, 'resize', initialize);
+    google.maps.event.addDomListener(window, 'load', initialize)
+
 });
 
 
