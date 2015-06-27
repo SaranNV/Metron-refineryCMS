@@ -178,11 +178,6 @@ $(".close-modal").on('click',function(){
     $("#overlay").css("display","none");
 });
 
-//$( document ).ready(function() {
-//    twttr.widgets.load();
-//});
-
-
 //geo map javascript
 
 $( document ).ready(function() {
@@ -207,8 +202,9 @@ $( document ).ready(function() {
         });
     }
     google.maps.event.addDomListener(window, 'resize', initialize);
-    google.maps.event.addDomListener(window, 'load', initialize)
-
+    google.maps.event.addDomListener(window, 'load', initialize);
+    window.onload = initialize();
+    twttr.widgets.load();
 });
 
 
