@@ -210,7 +210,7 @@ $( document ).ready(function() {
         };
 
         //create the map, and place it in the HTML map div
-        map = new google.maps.Map(
+        var map = new google.maps.Map(
             document.getElementById("mapPlaceholder"), mapOptions
         );
 
