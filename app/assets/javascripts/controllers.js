@@ -239,7 +239,3 @@ $( document ).ready(function() {
     twttr.widgets.load();
 });
 
-
-
-//}]);
-
