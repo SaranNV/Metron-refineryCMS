@@ -190,6 +190,7 @@
         margin: 0px;
         padding: 0px;
         display: inline;
+        font-size: large;
     }
 
     .contact-us-form-wrapper .submenu-section li:first-child a {
@@ -293,8 +294,7 @@
     }
 
     .paper_plane-icon, .notifications .notification:before {
-        background: url("/images/paper_plane.png") no-repeat top left;
-        background-image: url("/images/paper_plane.svg"), none;
+        background: url("/images/metron_logo.png") no-repeat center;
         background-size: contain;
     }
 
