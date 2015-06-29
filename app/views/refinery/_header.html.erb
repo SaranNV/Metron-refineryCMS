@@ -1,12 +1,37 @@
-<div class="row margin_zero" style="background: #f1f1f1">
-  <div class="col-md-9">
+<div id = 'header_row'>
+<div id="head" class="row margin_zero" style="background: #f1f1f1">
+  <div class="col-md-6 col-xs-6 col-sm-6">
     <h1 id='logo'>
       <%#= link_to Refinery::Core.site_name, refinery.root_path %>
-      <img src="/images/metron_logo.png">
+      <a href="/"><img src="/images/metron_logo.png" style="  padding-top: 15px;"></a>
     </h1>
   </div>
-  <div class="col-md-3" style="padding-top: 30px">
+  <div class="col-md-6 col-xs-6 col-sm-6" style="padding-top: 30px;  padding-left: 15%;">
     <div><span><img src="/images/mail_icon.png"></span><b style="  padding-left: 10px;">info@metronconsulting.com</b></div>
     <div><span><img src="/images/mobile_icon.png"></span><b style="  padding-left: 10px;">1800-796-0478</b></div>
-  </div></div>
+  </div>
+</div>
 <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+<img src="/images/life.jpg" id="img_view">
+</div>
+<div id='header_row_1' class="row margin_zero">
+  <!--<nav id="nav" class="navbar navbar-inverse" style="  padding: 15px; width:100%;  z-index: 50;  transition: background-color, 0.5s;">-->
+    <!--<button type="button" >-->
+      <!--<span class="sr-only">Toggle navigation</span>-->
+      <!--<span class="icon-bar"></span>-->
+      <!--<span class="icon-bar"></span>-->
+      <!--<span class="icon-bar"></span>-->
+    <!--</button>-->
+  <div style="text-align: center;padding-top: 10px;">
+  <a class="toggle"><img src="/images/menu-btn.png"></a>
+    <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+    <img src="/images/life.jpg" id="img_view">
+  </div>
+    <!--<a class="navbar-brand" href="/"><img src="/images/metron_logo.png" style="margin-top: -26px;width: 160px;"></a>-->
+      <!--<div id="bs-example-navbar-collapse-1" style="display: none; !important;">-->
+        <!--<ul class="nav navbar-nav nav_float" >-->
+          <!--<%#= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>-->
+        <!--</ul>-->
+      <!--</div>-->
+  <!--</nav>-->
+</div>

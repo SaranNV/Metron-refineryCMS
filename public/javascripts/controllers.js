@@ -8,9 +8,9 @@
 
 
 var nav_show = true;
-
+console.log("controller");
 $( document ).ready(function() {
-    $('#back_to_top').removeClass('back_to_top');
+    console.log("ready");
     $("#id2").hide();
     $("#id4").hide();
     $("#id6").hide();
@@ -46,6 +46,7 @@ $( document ).ready(function() {
     });
 
     $('.back-to-top').click(function(){
+        console.log("click");
         $('html, body').animate({scrollTop : 0},800);
         return false;
     });
@@ -79,8 +80,23 @@ function mouseOut(e){
 }
 
 
+    function fixDiv() {
+       console.log("#############");
+        var $cache = $('ul .nav');
+        if ($(window).scrollTop() > 100){
+            $cache.addClass('.navbar-fixed-top');
+        }
+        else{
+            $cache.removeClass('.navbar-fixed-top');
+        }
+    }
+
+
+
 
 $(window).scroll(function(){
+    console.log("#############");
+    fixDiv();
     var window_top = $(window).scrollTop();
     if(window_top != 0){
         $('#nav').css({'background-color': 'black','border-color':'black'})
