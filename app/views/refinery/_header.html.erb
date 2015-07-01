@@ -12,8 +12,39 @@
   </div>
 </div>
 <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
-<img src="/images/life.jpg" id="img_view">
-</div>
+<!--<img src="/images/life.jpg" id="img_view">-->
+
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="  text-align: -webkit-center;">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <img class="banner-img" src="/images/ecomm-banner1.jpg" alt="slider3" />
+          </div>
+          <div class="item">
+            <img class="banner-img" src="/images/web_design_bg.jpg" alt="slider2" />
+            <div style="top: 33%;background: #003649;opacity: 0.6;" class="carousel-caption">
+              <h3 style="color: #B3ECE7;">E Commerce Web Development!</h3>
+              <div style="background-color: #167194; width: 32%;margin-left: 32%;">Easily update products at any time.</div>
+              <div style="background-color: #065664;width: 32%;margin-left: 40%;">Sell your products online.</div>
+              <div style="  background-color: #02282A; width: 32%;margin-left: 48%">Quick,Easy and Convenient.</div>
+            </div>
+          </div>
+          <div class="item">
+            <img class="banner-img"  src="/images/ecomm-banner3.png" alt="slide1" />
+          </div>
+          <div class="item">
+            <img class="banner-img" src="/images/ecomm-banner2.jpg" alt="slider4" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 <div id='header_row_1' class="row margin_zero">
   <!--<nav id="nav" class="navbar navbar-inverse" style="  padding: 15px; width:100%;  z-index: 50;  transition: background-color, 0.5s;">-->
     <!--<button type="button" >-->
@@ -25,9 +56,39 @@
   <div style="text-align: center;padding-top: 10px;">
   <a class="toggle"><img src="/images/menu-btn.png"></a>
     <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
-    <img src="/images/life.jpg" id="img_view">
+    <!--<img src="/images/life.jpg" id="img_view">-->
+
   </div>
-    <!--<a class="navbar-brand" href="/"><img src="/images/metron_logo.png" style="margin-top: -26px;width: 160px;"></a>-->
+  <!--<div id="carousel-example-generic1" class="carousel slide" data-ride="carousel" style="  text-align: -webkit-center;">-->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic1" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic1" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic1" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic1" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item">
+        <img class="banner-img" src="/images/ecomm-banner1.jpg" alt="slider3" />
+      </div>
+      <div class="item active">
+        <img class="banner-img" src="/images/web_design_bg.jpg" alt="slider2" />
+        <div style="top: 33%;background: #003649;opacity: 0.6;" class="carousel-caption">
+          <h3 style="color: #B3ECE7;">E Commerce Web Development!</h3>
+          <div style="background-color: #167194">Easily update products at any time.</div>
+          <div style="background-color: #065664">Sell your products online.</div>
+          <div style="  background-color: #02282A">Quick,Easy and Convenient.</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="banner-img"  src="/images/ecomm-banner3.png" alt="slide1" />
+      </div>
+      <div class="item">
+        <img class="banner-img" src="/images/ecomm-banner2.jpg" alt="slider4" />
+      </div>
+    </div>
+  <!--</div>-->
+
+  <!--<a class="navbar-brand" href="/"><img src="/images/metron_logo.png" style="margin-top: -26px;width: 160px;"></a>-->
       <!--<div id="bs-example-navbar-collapse-1" style="display: none; !important;">-->
         <!--<ul class="nav navbar-nav nav_float" >-->
           <!--<%#= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>-->

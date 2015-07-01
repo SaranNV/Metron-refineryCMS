@@ -2,6 +2,7 @@
 
 var nav_show = true;
 var rowHeight = $('#head').height();
+var twttr;
 
 $( document ).ready(function() {
     togg();
@@ -27,7 +28,15 @@ $( document ).ready(function() {
         return false;
     });
 
+    twitter_widget_load();
 });
+function twitter_widget_load(){
+        if (twttr) {
+            if (twttr.widgets != undefined) {
+                twttr.widgets.load()
+            }
+        }
+}
 
 function togg(){
     if($(window).width() < 768)
@@ -102,7 +111,7 @@ $(window).resize(function() {
 function fixDiv() {
     var $cache = $('.nav');
     if ($(window).scrollTop() > rowHeight){
-        $cache.css({'position': 'fixed','top':'0','z-index': '100000','background':'#000','padding':'3px'});
+        $cache.css({'position': 'fixed','top':'0','z-index': '100000','background':'#000'});
         $('#menu ul li a').css({'color':'#fff'})
     }
     else{
@@ -122,7 +131,6 @@ $(window).scroll(function(){
     if($(window).width() > 768){
         fixDiv();
     }else{
-        console.log('#### sm screen ####');
     }
 });
 
@@ -208,34 +216,5 @@ function validateEmail(email) {
 $(".close-modal").on('click',function(){
     $(".notifications").css("display","none");
     $("#overlay").css("display","none");
-});
-
-//geo map javascript
-
-$( document ).ready(function() {
-    function initialize() {
-        var latitude = $('#location-canvas').attr('data-parameter1');
-        var longitude = $('#location-canvas').attr('data-parameter2');
-        var coords = new google.maps.LatLng(latitude, longitude);
-
-        var mapOptions = {
-            zoom: 9,
-            center: coords,
-            mapTypeId: google.maps.MapTypeId.TERRAIN
-        };
-
-        var map = new google.maps.Map(document.getElementById('location-canvas'),
-            mapOptions);
-
-        var marker = new google.maps.Marker({
-            map: map,
-            draggable: false,
-            position: coords
-        });
-    }
-    google.maps.event.addDomListener(window, 'resize', initialize);
-    google.maps.event.addDomListener(window, 'load', initialize);
-    window.onload = initialize();
-    twttr.widgets.load();
 });
 

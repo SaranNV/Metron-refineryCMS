@@ -318,7 +318,7 @@
     .ul-error-list {
         list-style: none;
         padding: 0;
-        color: #0099cc;
+        color: #CD2828;
     }
 
     .ul-error-list li {
@@ -370,7 +370,7 @@
     }
 
     ul.social-networks {
-        margin: 23px;
+        /*margin: 23px;*/
         padding: 46px;
         border: 0;
         margin-top: 0px;
@@ -428,6 +428,7 @@
     overflow: visible;
     position: absolute;
     padding-left: 50px;
+    z-index: 10000;
 }
 
 #menu ul li a{
@@ -459,6 +460,14 @@
     margin-right: auto;
     padding: 100px 20px 75px 20px;"
 }
+.banner-img{
+    height: 350px !important;
+    width: 100%;
+}
+
+.google_maps{height:100%;margin:0 auto;}
+.map_iframe {position:relative;}
+.map_iframe iframe {top:0;left:0;width:100%;}
 
 
 @media only screen and (max-width: 768px) {
