@@ -36,9 +36,9 @@
     padding-bottom: 60px;
 }
 .format{
-    margin-top: 25px;
-    font-size: 20px;
-    font-family: initial;
+    width: 100%;
+    line-height: 7.35mm;
+    font-size: 15px;
 }
 
 .sub-cont{
@@ -252,7 +252,8 @@
         border-radius: 5px;
         position: fixed;
         top: 50%;
-        left: 50%;
+        left: 30%;
+        right: 25%;
         margin-top: -190px;
         margin-bottom: -190px;
         width: 380px;
@@ -468,9 +469,11 @@
 .google_maps{height:100%;margin:0 auto;}
 .map_iframe {position:relative;}
 .map_iframe iframe {top:0;left:0;width:100%;}
+#selector { display: none; }
+.hidden { display: none; }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
     .nav_float {
         float: none !important;
         text-align: center;
@@ -481,5 +484,19 @@
     .contact-us-info-section {
         display: none;
     }
-
+    .mouse_hover {
+        padding-top: 10%;
+    }
+    .p_text{
+        font-size: 16px !important;
+    }
+    .footer{
+        font-size: 18px !important;
+    }
+    .format{
+        font-size: 17px !important;
+    }
+    #menu ul li{
+        font-size: 1em;
+    }
 }

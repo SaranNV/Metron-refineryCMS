@@ -10,7 +10,6 @@
     display: inline;
 }
 .submenu-section ul li {
-    margin: 10px;
     padding: 0px;
     display: inline;
 }
@@ -115,11 +114,11 @@ ul li:last-child:after {
 }
 
 .format {
-    margin-top: 25px;
-    font-size: 20px;
+    width: 100%;
+    line-height: 7.35mm;
+    font-size: 17px;
 }
 .header {
-    float: left;
     display: block;
     margin-right: 2%;
     width: 70%;
@@ -150,9 +149,9 @@ ul li:last-child:after {
     margin-right: 0;
 }
 
-.services-webdevelopment-section h4{
-    margin-top: 20px;
-}
+/*.services-webdevelopment-section h4{*/
+    /*margin-top: 20px;*/
+/*}*/
 
 .shared-headings, h1, h2, h3, h4, h5, h6 {
     margin: 0 0 20px;
@@ -230,10 +229,10 @@ ul li:last-child:after {
 .services-ror-section .ror-description {
     text-align: left;
 }
-.services-ror-section h2+p{
-    font-size: 1.2rem;
-    line-height: 1.6875em;
-}
+/*.services-ror-section h2+p{*/
+    /*font-size: 15px;*/
+    /*line-height: 7.35mm;*/
+/*}*/
 .services-marketing-section h2+p{
     /*font-size: 1.125rem;*/
     line-height: 1.6875em;
@@ -329,7 +328,7 @@ ul li:last-child:after {
 .spree-image {
     display: block;
     width: 100%;
-    height: 270px;
+    height: 230px;
     background-image: url("/images/spree_partnership.jpg");
     background-repeat: no-repeat;
     background-position: center center;
