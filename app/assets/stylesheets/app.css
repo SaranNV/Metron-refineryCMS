@@ -499,4 +499,7 @@
     #menu ul li{
         font-size: 1em;
     }
+    .nav>li>a {
+        padding: 20px 15px !important;
+    }
 }
