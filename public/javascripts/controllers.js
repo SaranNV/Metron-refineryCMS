@@ -94,4 +94,25 @@ $(window).scroll(function(){
     }
 });
 
+
+//commnents javascript function
+$("#comment_submit").on("click",function(){
+    var request_url = window.location.href;
+    var name = $("#author").val();
+    var email = $("#email").val();
+    var blog_comment = $("#comment").val();
+    $.ajax({
+        type: "POST",
+        url: $form.attr("action"),
+        data:{
+            request_url : request_url,
+            name : name,
+            email : email ,
+            blog_comment : blog_comment
+        },
+        success: function(data){
+
+        }
+    })
+});
 //}]);

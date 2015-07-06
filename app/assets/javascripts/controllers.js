@@ -8,7 +8,11 @@
 
 
 var nav_show = true;
-
+var current_path;
+var split_path;
+var extracted_path;
+var posted_path;
+var blog_path;
 $( document ).ready(function() {
     $('#back_to_top').removeClass('back_to_top');
     $("#id2").hide();
@@ -49,7 +53,7 @@ $( document ).ready(function() {
         $('html, body').animate({scrollTop : 0},800);
         return false;
     });
-
+    get_message();
 });
 
 function mouseOver(e){
@@ -152,7 +156,7 @@ $('#detail_submit').on('click',function(){
                 document.getElementById('contact_us_message').value = "";
             },
             error: function(data){
-                alert(JSON.parse(xhr.responseText).Message);
+
             }
         });
     }
@@ -180,7 +184,7 @@ $(".close-modal").on('click',function(){
 
 //geo map javascript
 
-$( document ).ready(function() {
+$(document).ready(function() {
     function initialize() {
         var latitude = $('#location-canvas').attr('data-parameter1');
         var longitude = $('#location-canvas').attr('data-parameter2');
@@ -207,6 +211,80 @@ $( document ).ready(function() {
     twttr.widgets.load();
 });
 
+//commnents javascript function
+
+$("#comment_submit").on("click",function(){
+     current_path = window.location.href;
+     split_path = current_path.split("blog");
+     extracted_path = split_path[0];
+     posted_path = extracted_path+"blog/comment_submit";
+     var comment_author_name = $("#comment_author").val();
+     var author_email = $("#comment_email").val();
+     var comment_message= $("#comment_message").val();
+     var blog_url = window.location.href;
+        if(comment_author_name === "" && author_email === "" && comment_message === "" ){
+            $(".name_required").css("display","block");
+            $(".email_required").css("display","block");
+            $(".message_required").css("display","block");
+        }else if(comment_author_name === "" && author_email === ""){
+            $(".name_required").css("display","block");
+            $(".email_required").css("display","block");
+        }else if(author_email === "" && comment_message === "" ){
+            $(".email_required").css("display","block");
+            $(".message_required").css("display","block");
+        }else if(comment_message === "" && comment_author_name === ""  ){
+            $(".name_required").css("display","block");
+            $(".message_required").css("display","block");
+        }else if(comment_author_name === ""){
+            $(".name_required").css("display","block");
+        }else if(author_email === ""){
+            $(".email_required").css("display","block");
+        }else if(comment_message === "") {
+            $(".message_required").css("display", "block");
+        }else {
+            $.ajax({
+                url: posted_path,
+                type: "POST",
+                data: {
+                    author_name: comment_author_name,
+                    author_email: author_email,
+                    comment_message: comment_message,
+                    blog_url: blog_url
+                },
+                success: function (data) {
+                    get_message();
+                }
+
+            });
+
+        }
+    return false;
+});
 
 
-//}]);
+function get_message(){
+    var blogs = window.location.href;
+    $.ajax({
+        url : "/blog/get_blog_comments",
+        type : 'POST',
+        data:{
+          blogs : blogs
+        },
+        success : function(data){
+          console.log(data);
+          if(data.comments_count > 0){
+
+            $(".post-author").text(data.name + " , ");
+            $(".post-author").append('<span class="post-date"> </span>');
+            $(".post-date").text(data.created_at);
+            $(".blog-comment").text(data.comments);
+            $(".comment").fadeIn("slow");
+          }
+          else{
+              $(".avatar").css("display","none");
+              $(".leave-comment").prepend('<span class="nocomment">"There are no Comments for this blog"</span>');
+
+          }
+        }
+    });
+}
