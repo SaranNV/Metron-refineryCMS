@@ -66,8 +66,7 @@ $('.toggle').click(function(){
         nav_show = false;
     }
     else{
-        //abdul
-        $('#menu .nav').css({'display': 'block','padding-left':'0','margin-top' : '20px'});
+        $('#menu .nav').css({'display': 'block','padding-left':'0','margin-top' : '10px'});
         //$('#menu .nav').show(1000).css({'display': 'block','padding-left':'0','top' : '60px'});
         nav_show = true;
     }
@@ -108,10 +107,10 @@ $(window).resize(function() {
     togg();
     rowHeight = $('#head').height();
     if($(window).width() > 1280){
-        $('#menu .nav').css({'display': '-webkit-inline-box','padding-left':'50px'});
+        $('#menu .nav').css({'padding-top': '0px','display': '-webkit-inline-box','padding-left':'50px'});
         fixDiv();
     }else{
-        $('#menu .nav').css({'top': '30px','position': 'absolute;','padding-left':'0','background': 'rgba(255,255,255,0.75)'});
+        $('#menu .nav').css({'padding-top': '50px','top': '0px','padding-left':'0','background': 'rgba(255,255,255,0.75)'});
         $('#menu ul li a').css({'color':'#000'});
     }
 });
