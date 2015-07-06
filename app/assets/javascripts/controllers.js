@@ -166,15 +166,29 @@ function validateEmail(email) {
 
     var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     var validation = $(".invalid-email");
-    var txt_email_value = $("#contact_us_email").val();
+    var comment_validation = $(".email_required");
+    var comment_email_check = $("#comment_email").val();
+    var contact_txt_email_value = $("#contact_us_email").val();
+    if(contact_txt_email_value){
+        if (reg.test(contact_txt_email_value) == false)
+        {
 
-    if (reg.test(txt_email_value) == false)
-    {
-        validation.css("display","block");
-        return false;
+            validation.css("display","block");
+            return false;
+        }
+        validation.css("display","none");
+        return true;
+    }else{
+        if (reg.test(comment_email_check) == false)
+        {
+            comment_validation.css("display","");
+            comment_validation.text("This value Should be Valid Email");
+            return false;
+        }else{
+            comment_validation.css("display","none");
+            return true;
+        }
     }
-    validation.css("display","none");
-    return true;
 
 }
 $(".close-modal").on('click',function(){
@@ -214,50 +228,53 @@ $(document).ready(function() {
 //commnents javascript function
 
 $("#comment_submit").on("click",function(){
-     current_path = window.location.href;
-     split_path = current_path.split("blog");
-     extracted_path = split_path[0];
-     posted_path = extracted_path+"blog/comment_submit";
-     var comment_author_name = $("#comment_author").val();
-     var author_email = $("#comment_email").val();
-     var comment_message= $("#comment_message").val();
-     var blog_url = window.location.href;
-        if(comment_author_name === "" && author_email === "" && comment_message === "" ){
-            $(".name_required").css("display","block");
-            $(".email_required").css("display","block");
-            $(".message_required").css("display","block");
-        }else if(comment_author_name === "" && author_email === ""){
-            $(".name_required").css("display","block");
-            $(".email_required").css("display","block");
-        }else if(author_email === "" && comment_message === "" ){
-            $(".email_required").css("display","block");
-            $(".message_required").css("display","block");
-        }else if(comment_message === "" && comment_author_name === ""  ){
-            $(".name_required").css("display","block");
-            $(".message_required").css("display","block");
-        }else if(comment_author_name === ""){
-            $(".name_required").css("display","block");
-        }else if(author_email === ""){
-            $(".email_required").css("display","block");
-        }else if(comment_message === "") {
-            $(".message_required").css("display", "block");
-        }else {
-            $.ajax({
-                url: posted_path,
-                type: "POST",
-                data: {
-                    author_name: comment_author_name,
-                    author_email: author_email,
-                    comment_message: comment_message,
-                    blog_url: blog_url
-                },
-                success: function (data) {
-                    get_message();
-                }
+    current_path = window.location.href;
+    split_path = current_path.split("blog");
+    extracted_path = split_path[0];
+    posted_path = extracted_path+"blog/comment_submit";
+    var comment_author_name = $("#comment_author").val();
+    var author_email = $("#comment_email").val();
+    var comment_message= $("#comment_message").val();
+    var blog_url = window.location.href;
+    if(comment_author_name === "" && author_email === "" && comment_message === "" ){
+        $(".name_required").css("display","block");
+        $(".email_required").css("display","block");
+        $(".message_required").css("display","block");
+    }else if(comment_author_name === "" && author_email === ""){
+        $(".name_required").css("display","block");
+        $(".email_required").css("display","block");
+    }else if(author_email === "" && comment_message === "" ){
+        $(".email_required").css("display","block");
+        $(".message_required").css("display","block");
+    }else if(comment_message === "" && comment_author_name === ""  ){
+        $(".name_required").css("display","block");
+        $(".message_required").css("display","block");
+    }else if(comment_author_name === ""){
+        $(".name_required").css("display","block");
+    }else if(author_email === ""){
+        $(".email_required").css("display","block");
+    }else if(comment_message === "") {
+        $(".message_required").css("display", "block");
+    }else {
+        $.ajax({
+            url: posted_path,
+            type: "POST",
+            data: {
+                author_name: comment_author_name,
+                author_email: author_email,
+                comment_message: comment_message,
+                blog_url: blog_url
+            },
+            success: function (data) {
+                get_message();
+                $("#comment_author").val("");
+                $("#comment_email").val("");
+                $("#comment_message").val("");
+            }
 
-            });
+        });
 
-        }
+    }
     return false;
 });
 
@@ -268,23 +285,60 @@ function get_message(){
         url : "/blog/get_blog_comments",
         type : 'POST',
         data:{
-          blogs : blogs
+            blogs : blogs
         },
         success : function(data){
-          console.log(data);
-          if(data.comments_count > 0){
+            if(data.comments_count > 0){
+                $(".avatar").css("display","");
+                $(".nocomment").css("display","none");
+                $(".avatar").attr("id",data.id);
+                $(".post-author").text(data.name + " , ");
+                $(".post-author").append('<span class="post-date"> </span>');
+                $(".post-date").text(data.created_at+" ago");
+                $(".btn_delete").attr("id",data.id);
+                $(".blog-comment").text(data.comments);
+                $(".comment").hide().fadeIn('fast');
+                if(data.delete_access === true){
+                    $(".btn_delete").css("display","");
+                }else{
+                    $(".btn_delete").css("display","none");
+                }
+            }
+            else{
+                $(".avatar").css("display","none");
+                $(".leave-comment").prepend('<span class="nocomment">"There are no Comments for this blog"</span>');
+                $(".btn_delete").css("display","none");
+                $(".post-author").text("");
+                $(".post-date").text("");
+                $(".blog-comment").text("");
 
-            $(".post-author").text(data.name + " , ");
-            $(".post-author").append('<span class="post-date"> </span>');
-            $(".post-date").text(data.created_at);
-            $(".blog-comment").text(data.comments);
-            $(".comment").fadeIn("slow");
-          }
-          else{
-              $(".avatar").css("display","none");
-              $(".leave-comment").prepend('<span class="nocomment">"There are no Comments for this blog"</span>');
-
-          }
+            }
         }
     });
 }
+
+//delete_msg function
+$(".btn_delete").on("click",function() {
+    var delete_id = this.id;
+    var checkstr =  confirm('are you sure you want to delete this?');
+    if(checkstr == true) {
+        $.ajax({
+            url: "/blog/delete_comments",
+            type: 'POST',
+            data: {
+                comment_id: delete_id
+            },
+            success: function (data) {
+                alert("Comment was Successfully removed!");
+                get_message();
+                $('.comments').hide().fadeIn('fast');
+            },
+            error: function (data) {
+
+            }
+        });
+    }else{
+        return false;
+    }
+
+});

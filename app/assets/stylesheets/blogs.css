@@ -292,7 +292,7 @@ a {
     margin-top: 150px;
 }
 .post-author{
-  margin-top: -66px;
+  margin-top: -50px;
   margin-left: 74px;
   font-size: large;
   font-style:italic;
@@ -312,14 +312,22 @@ a {
   background-size: contain;
 }
 .comment-reply-link{
-    color: #23527c;
-    text-decoration: None;
+  color: #23527c;
+  text-decoration: None;
 }
 .comments-section{
-    margin-left: -95px;
+  margin-left: -95px;
 }
 .nocomment{
-    position: absolute;
-    margin-top: -102px;
-    margin-left: 487px;
+  position: absolute;
+  margin-top: -102px;
+  margin-left: 487px;
+}
+.btn_delete{
+  float: right;
+}
+#delete_message{
+  width: 50%;
+  text-align: center;
+  margin-left: 237px;
 }
