@@ -36,16 +36,16 @@
     padding-bottom: 60px;
 }
 .format{
-    margin-top: 25px;
-    font-size: 20px;
-    font-family: initial;
+    width: 100%;
+    line-height: 7.35mm;
+    font-size: 15px;
 }
 
 .sub-cont{
     max-width: 1040px;
     margin-left: auto;
     margin-right: auto;
-    padding: 100px 20px 75px 20px;"
+    padding: 100px 20px 75px 20px;
 }
 
 .thumb_header{
@@ -252,7 +252,8 @@
         border-radius: 5px;
         position: fixed;
         top: 50%;
-        left: 50%;
+        left: 30%;
+        right: 25%;
         margin-top: -190px;
         margin-bottom: -190px;
         width: 380px;
@@ -318,7 +319,7 @@
     .ul-error-list {
         list-style: none;
         padding: 0;
-        color: #0099cc;
+        color: #CD2828;
     }
 
     .ul-error-list li {
@@ -370,7 +371,7 @@
     }
 
     ul.social-networks {
-        margin: 23px;
+        /*margin: 23px;*/
         padding: 46px;
         border: 0;
         margin-top: 0px;
@@ -428,6 +429,7 @@
     overflow: visible;
     position: absolute;
     padding-left: 50px;
+    z-index: 10000;
 }
 
 #menu ul li a{
@@ -436,9 +438,8 @@
     padding-left: 25px;
     padding-right: 25px;
 }
-#menu{
-    background: url("/images/life.jpg") no-repeat;
-    background-size: 100%;
+#img_view{
+    width: 100%;
     height: 400px;
 }
 #header #logo{
@@ -446,8 +447,33 @@
     font-weight: 300;
     background: #f1f1f1;
 }
+.navbar-fixed-top{
+    position: fixed !important;
+    top: 0;
+    -webkit-backface-visibility: hidden;
+    background-color: rgba(255,255,255,0.95);
+    z-index: 100000;
+}
 
-@media only screen and (max-width: 768px) {
+.sub-cont{
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 20px 75px 20px;
+}
+.banner-img{
+    height: 350px !important;
+    width: 100%;
+}
+
+.google_maps{height:100%;margin:0 auto;}
+.map_iframe {position:relative;}
+.map_iframe iframe {top:0;left:0;width:100%;}
+#selector { display: none; }
+.hidden { display: none; }
+
+
+@media only screen and (max-width: 1280px) {
     .nav_float {
         float: none !important;
         text-align: center;
@@ -458,5 +484,22 @@
     .contact-us-info-section {
         display: none;
     }
-
+    .mouse_hover {
+        padding-top: 10%;
+    }
+    .p_text{
+        font-size: 16px !important;
+    }
+    .footer{
+        font-size: 18px !important;
+    }
+    .format{
+        font-size: 17px !important;
+    }
+    #menu ul li{
+        font-size: 1em;
+    }
+    .nav>li>a {
+        padding: 20px 15px !important;
+    }
 }

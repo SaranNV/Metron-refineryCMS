@@ -56,3 +56,4 @@ production:
   username: postgres
   password: postgres
   min_messages: warning
+

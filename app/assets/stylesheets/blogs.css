@@ -142,11 +142,11 @@ h6 {
 .blog article .index-summary a img {
     width: 100%;
 }
-.blog article header h1 a {
+.blog article header h2 a {
     text-decoration: none;
     color: #000;
 }
-.blog article header h1 a:hover {
+.blog article header h2 a:hover {
     color: #04467E;
 }
 .blog-section .container{
