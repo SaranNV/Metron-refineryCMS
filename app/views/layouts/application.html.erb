@@ -13,9 +13,11 @@
       <section id="page">
         <%= yield %>
       </section>
-      <footer style="  background: #1f2326;padding: 2px;">
+      <div style="background: #1f2326;padding: 2px;">
+      <footer>
         <%= render "/refinery/footer" -%>
       </footer>
+      </div>
     </div>
     <%= render "/refinery/javascripts" %>
   </body>
