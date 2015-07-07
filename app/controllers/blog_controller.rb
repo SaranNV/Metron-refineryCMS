@@ -17,10 +17,11 @@ class BlogController < ApplicationController
 
   def get_blog_comments
    if current_refinery_user
-     current_refinery_user.has_role?(:superuser)
-      delete_acess = true
-   else
-     delete_acess = false
+     if current_refinery_user.has_role?(:superuser)
+       delete_acess = true
+     else
+      delete_acess = false
+     end
    end
    blog_url = params['blogs']
    @last_updated_comments = Comment.where(:block_url => blog_url).last

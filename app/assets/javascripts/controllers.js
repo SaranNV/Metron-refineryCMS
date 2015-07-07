@@ -346,6 +346,7 @@ function get_message(){
                 $(".btn_delete").attr("id",data.id);
                 $(".blog-comment").text(data.comments);
                 $(".comment").hide().fadeIn('fast');
+                console.log(data);
                 if(data.delete_access === true){
                     $(".btn_delete").css("display","");
                 }else{
