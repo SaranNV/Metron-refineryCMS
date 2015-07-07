@@ -306,6 +306,9 @@ a {
 .blog-comment{
     margin-left: 93px;
     margin-top: 12px;
+    height: 70px;
+    overflow: auto;
+    width: 80%;
 }
 .photo{
     background-image: url('/images/avatar1.png');

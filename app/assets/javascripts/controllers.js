@@ -347,6 +347,7 @@ function get_message(){
                 $(".btn_delete").attr("id",data.id);
                 $(".blog-comment").text(data.comments);
                 $(".comment").hide().fadeIn('fast');
+                $(".comm").hide();
                 if(data.delete_access === true){
                     $(".btn_delete").css("display","");
                 }else{
@@ -355,7 +356,7 @@ function get_message(){
             }
             else{
                 $(".avatar").css("display","none");
-                $(".leave-comment").prepend('<span class="nocomment">"There are no Comments for this blog"</span>');
+                $('.comment').prepend('<div class="comm" style="text-align: center">"There are no Comments for this blog"</div>');
                 $(".btn_delete").css("display","none");
                 $(".post-author").text("");
                 $(".post-date").text("");
