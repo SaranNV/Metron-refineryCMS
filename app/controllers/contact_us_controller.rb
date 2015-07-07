@@ -7,6 +7,8 @@ class ContactUsController < ApplicationController
     @post = Contactu.new(:name=>name,:email=>email,:message=>message)
     if @post.save!
       render :json => {:status => "ok"}
+    else
+      render :json => {:errors => @post.errors}
     end
   end
 end

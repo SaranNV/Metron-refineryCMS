@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   get '/contact_us' => 'contact_us#contact_us'
   post '/submit' => 'contact_us#submit'
   get '/blogs' => 'blogs#blog'
-
+  post '/blog/comment_submit' => 'blog#comment_submit'
+  post 'blog/get_blog_comments' => 'blog#get_blog_comments'
+  post 'blog/delete_comments' => 'blog#delete_comments'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

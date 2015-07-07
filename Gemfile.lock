@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/refinery/refinerycms
-  revision: 29ab03669a0bdba34c789442df1402f6df06e929
+  revision: 0bbbc54f7910b8a5436ed7351bb4efb35f6f4c20
   branch: master
   specs:
     refinerycms (3.0.0)
@@ -90,8 +90,6 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
-    byebug (5.0.0)
-      columnize (= 0.9.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -99,7 +97,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
-    columnize (0.9.0)
     debug_inspector (0.0.2)
     decorators (2.0.1)
       railties (>= 4.0.0, < 5.0.0)
@@ -124,7 +121,7 @@ GEM
       activemodel (>= 4.2.0, < 4.3)
       activerecord (>= 4.2.0, < 4.3)
     i18n (0.7.0)
-    jbuilder (2.3.0)
+    jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-rails (4.0.4)
@@ -141,7 +138,7 @@ GEM
     mime-types (2.6.1)
     mini_portile (0.6.2)
     minitest (5.7.0)
-    multi_json (1.11.1)
+    multi_json (1.11.2)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
@@ -238,7 +235,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
