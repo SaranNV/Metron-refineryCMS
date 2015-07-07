@@ -289,3 +289,46 @@ a {
     margin: 0px 15px 1px;
     width: 109%;
 }
+.comment-respond{
+    margin-top: 150px;
+}
+.post-author{
+    margin-top: -50px;
+    margin-left: 74px;
+    font-size: large;
+    font-style:italic;
+}
+.post-date{
+    margin-top: -21px;
+    font-size: small;
+    color: rgba(132, 136, 144, 1);
+}
+.blog-comment{
+    margin-left: 93px;
+    margin-top: 12px;
+}
+.photo{
+    background-image: url('/images/avatar1.png');
+    border-radius: 58%;
+    background-size: contain;
+}
+.comment-reply-link{
+    color: #23527c;
+    text-decoration: None;
+}
+.comments-section{
+    margin-left: -95px;
+}
+.nocomment{
+    position: absolute;
+    margin-top: -102px;
+    margin-left: 487px;
+}
+.btn_delete{
+    float: right;
+}
+#delete_message{
+    width: 50%;
+    text-align: center;
+    margin-left: 237px;
+}
