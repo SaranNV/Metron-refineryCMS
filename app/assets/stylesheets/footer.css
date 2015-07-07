@@ -90,5 +90,7 @@ ul.social-networks li {
 .footer .footer-section .footer-section-title, .footer .footer-section .blog-post-date, .footer .footer-section .tweet-date, .footer .footer-section ul.social-networks {
     color: #888888;
 }
-
+.blogs li a:hover{
+    color: #337ab7;
+}
 
