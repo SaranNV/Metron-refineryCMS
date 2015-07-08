@@ -246,35 +246,6 @@ $(".close-modal").on('click',function(){
     $("#overlay").css("display","none");
 });
 
-//geo map javascript
-
-$(document).ready(function() {
-    function initialize() {
-        var latitude = $('#location-canvas').attr('data-parameter1');
-        var longitude = $('#location-canvas').attr('data-parameter2');
-        var coords = new google.maps.LatLng(latitude, longitude);
-
-        var mapOptions = {
-            zoom: 9,
-            center: coords,
-            mapTypeId: google.maps.MapTypeId.TERRAIN
-        };
-
-        var map = new google.maps.Map(document.getElementById('location-canvas'),
-            mapOptions);
-
-        var marker = new google.maps.Marker({
-            map: map,
-            draggable: false,
-            position: coords
-        });
-    }
-    google.maps.event.addDomListener(window, 'resize', initialize);
-    google.maps.event.addDomListener(window, 'load', initialize);
-    window.onload = initialize();
-    twttr.widgets.load();
-});
-
 //commnents javascript function
 
 $("#comment_submit").on("click",function(){
