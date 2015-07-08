@@ -220,7 +220,7 @@ function validateEmail(email) {
     if(contact_txt_email_value){
         if (reg.test(contact_txt_email_value) == false)
         {
-
+            $("#contact_us_email").val("");
             validation.css("display","block");
             return false;
         }
@@ -229,6 +229,7 @@ function validateEmail(email) {
     }else{
         if (reg.test(comment_email_check) == false)
         {
+            $("#comment_email").val("");
             comment_validation.css("display","");
             comment_validation.text("This value Should be Valid Email");
             return false;
@@ -346,7 +347,6 @@ function get_message(){
                 $(".btn_delete").attr("id",data.id);
                 $(".blog-comment").text(data.comments);
                 $(".comment").hide().fadeIn('fast');
-                console.log(data);
                 if(data.delete_access === true){
                     $(".btn_delete").css("display","");
                 }else{

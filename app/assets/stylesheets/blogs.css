@@ -332,3 +332,15 @@ a {
     text-align: center;
     margin-left: 237px;
 }
+.name_required{
+    display:block;
+    color: #CD2828;
+}
+.email_required{
+    display:block;
+    color: #CD2828;
+}
+.message_required{
+    display:block;
+    color: #CD2828;
+}
