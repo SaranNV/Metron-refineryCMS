@@ -212,8 +212,7 @@
     }
 
     label, legend {
-        font-size: 18px;
-        font-size: 1.125rem;
+        font-size: 1.5rem;
         /* display: block; */
         padding: 6px 0 6px;
     }
@@ -341,7 +340,7 @@
         margin-left: 17%;
         text-align: left;
         margin-right: 16%;
-        margin-top: 26px;
+        margin-top: 90px;
     }
 
     .contact-us-info-section h4:first-child {

@@ -128,6 +128,7 @@ function fixDiv() {
         $('#menu ul li a').css({'color':'#fff'})
     }
     else{
+        rowHeight = $('#head').height();
         $('#menu ul li a').css({'color':'#000'});
         $cache.css({'position': 'absolute','top':rowHeight + 'px','background': 'rgba(255,255,255,0.75)','border': 'none', 'margin-top': '0'});
     }
