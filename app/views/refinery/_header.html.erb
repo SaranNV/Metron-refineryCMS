@@ -43,8 +43,8 @@
     </div>
 
 
-<div id='header_row_1' class="row margin_zero hidden">
-  <div style="text-align: center;padding-top: 20px;padding-bottom: 20px">
+<div id='header_row_1' class="row margin_zero hidden" style="display: table">
+  <div style="text-align: center;margin-top: 20px;margin-bottom: 20px">
   <a class="toggle"><img src="/images/menu-btn.png" style="  width: 4%;"></a>
     <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
   </div>

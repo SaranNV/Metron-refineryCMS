@@ -73,7 +73,7 @@ header, .hgroup, nav, section, summary {
 
 a {
     color: #888888;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 .logo a:before {
     content: "";
@@ -229,7 +229,7 @@ a {
     width: 100%;
 }
 .sc-input {
-    padding: 10px;
+    /*padding: 10px;*/
     border-radius: 8px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -287,7 +287,7 @@ a {
 }
 .form-contents{
     margin: 0px 15px 1px;
-    width: 109%;
+    width: 97%;
 }
 .comment-respond{
     margin-top: 150px;
@@ -306,6 +306,9 @@ a {
 .blog-comment{
     margin-left: 93px;
     margin-top: 12px;
+    height: 70px;
+    overflow: auto;
+    width: 80%;
 }
 .photo{
     background-image: url('/images/avatar1.png');

@@ -90,5 +90,38 @@ ul.social-networks li {
 .footer .footer-section .footer-section-title, .footer .footer-section .blog-post-date, .footer .footer-section .tweet-date, .footer .footer-section ul.social-networks {
     color: #888888;
 }
+.blogs li a:hover{
+    color: #337ab7;
+}
 
+.address {
+    background: url(../images/sprite.png) -344px -165px no-repeat;
+    padding-left: 40px;
+    list-style-type: none;
+}
+.phone {
+    background: url(../images/sprite.png) -345px -309px no-repeat;
+    padding-left: 40px;
+    list-style-type: none;
+}
+.email {
+    background: url(../images/sprite.png) -345px -414px no-repeat;
+    padding-left: 40px;
+    list-style-type: none;
+}
 
+.contact_us_address {
+    background: url(../images/sprite.png) -344px -172px no-repeat;
+    padding-left: 40px;
+    list-style-type: none;
+}
+.contact_us_phone {
+    background: url(../images/sprite.png) -347px -315px no-repeat;
+    padding-left: 40px;
+    list-style-type: none;
+}
+.contact_us_email {
+    background: url(../images/sprite.png) -348px -422px no-repeat;
+    padding-left: 40px;
+    list-style-type: none;
+}

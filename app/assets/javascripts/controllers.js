@@ -53,6 +53,7 @@ function togg(){
         $('#header_row').hide();
         $('#header_row_1').show();
         $('#header_row_1').removeClass('hidden');
+        $('#menu .nav').css({'position': 'inherit'})
     }
     else{
 
@@ -61,6 +62,7 @@ function togg(){
         $('#menu .nav').show();
         $('#header_row').removeClass('hidden');
         rowHeight = $('#head').height();
+        $('#menu .nav').css({'position': 'absolute'})
     }
 }
 
@@ -70,9 +72,10 @@ $('.toggle').click(function(){
     {
         $('#menu .nav').hide();
         nav_show = false;
+
     }
     else{
-        $('#menu .nav').css({'display': 'block','padding-left':'0','margin-top' : '10px'});
+        $('#menu .nav').css({'display': 'table','padding-left':'0', 'margin-top' : '20px'});
         //$('#menu .nav').show(1000).css({'display': 'block','padding-left':'0','top' : '60px'});
         nav_show = true;
     }
@@ -113,10 +116,10 @@ $(window).resize(function() {
     togg();
     rowHeight = $('#head').height();
     if($(window).width() > 1280){
-        $('#menu .nav').css({'padding-top': '0px','display': '-webkit-inline-box','padding-left':'50px'});
+        $('#menu .nav').css({'display': '-webkit-inline-box','padding-left':'50px'});
         fixDiv();
     }else{
-        $('#menu .nav').css({'padding-top': '50px','top': '0px','padding-left':'0','background': 'rgba(255,255,255,0.75)'});
+        $('#menu .nav').css({'padding-left':'0','background': 'rgba(255,255,255,0.75)','top':'30px'});
         $('#menu ul li a').css({'color':'#000'});
     }
 });
@@ -129,7 +132,7 @@ function fixDiv() {
     }
     else{
         $('#menu ul li a').css({'color':'#000'});
-        $cache.css({'position': 'absolute','top':rowHeight + 'px','background': 'rgba(255,255,255,0.75)','border': 'none', 'margin-top': '0'});
+        $cache.css({'position': 'absolute','top':'130px','background': 'rgba(255,255,255,0.75)','border': 'none', 'margin-top': '0'});
     }
 }
 
@@ -245,35 +248,6 @@ $(".close-modal").on('click',function(){
     $("#overlay").css("display","none");
 });
 
-//geo map javascript
-
-$(document).ready(function() {
-    function initialize() {
-        var latitude = $('#location-canvas').attr('data-parameter1');
-        var longitude = $('#location-canvas').attr('data-parameter2');
-        var coords = new google.maps.LatLng(latitude, longitude);
-
-        var mapOptions = {
-            zoom: 9,
-            center: coords,
-            mapTypeId: google.maps.MapTypeId.TERRAIN
-        };
-
-        var map = new google.maps.Map(document.getElementById('location-canvas'),
-            mapOptions);
-
-        var marker = new google.maps.Marker({
-            map: map,
-            draggable: false,
-            position: coords
-        });
-    }
-    google.maps.event.addDomListener(window, 'resize', initialize);
-    google.maps.event.addDomListener(window, 'load', initialize);
-    window.onload = initialize();
-    twttr.widgets.load();
-});
-
 //commnents javascript function
 
 $("#comment_submit").on("click",function(){
@@ -347,6 +321,7 @@ function get_message(){
                 $(".btn_delete").attr("id",data.id);
                 $(".blog-comment").text(data.comments);
                 $(".comment").hide().fadeIn('fast');
+                $(".comm").hide();
                 if(data.delete_access === true){
                     $(".btn_delete").css("display","");
                 }else{
@@ -355,7 +330,7 @@ function get_message(){
             }
             else{
                 $(".avatar").css("display","none");
-                $(".leave-comment").prepend('<span class="nocomment">"There are no Comments for this blog"</span>');
+                $('.comment').prepend('<div class="comm" style="text-align: center">"There are no Comments for this blog"</div>');
                 $(".btn_delete").css("display","none");
                 $(".post-author").text("");
                 $(".post-date").text("");
