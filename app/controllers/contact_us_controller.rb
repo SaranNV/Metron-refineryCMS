@@ -6,6 +6,7 @@ class ContactUsController < ApplicationController
     message = params['client_message']
     @post = Contactu.new(:name=>name,:email=>email,:message=>message)
     if @post.save!
+      ContactMessageSend.sample_email(name,message,email ).deliver_now
       render :json => {:status => "ok"}
     else
       render :json => {:errors => @post.errors}
