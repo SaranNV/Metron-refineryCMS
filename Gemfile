@@ -56,3 +56,5 @@ gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
 
 gem 'pg'
+#to set environment variable
+gem 'figaro'

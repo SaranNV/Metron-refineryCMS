@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<div style="background-color: #eaeaea;">
+  <center>
+    <div style= "width: 350px;height: 250px; border-right: 1px solid #d2d2d2;
+            border-top: 1px solid #d2d2d2;border-bottom: 1px solid #d2d2d2;background-color: white;">
+      <div style="font-size: 14px; color: #444444;
+              font-family: 'Open Sans','Lucida Grande','Segoe UI',Arial,Verdana,'Lucida Sans Unicode',Tahoma,'Sans Serif';
+              border-collapse: collapse;">
+        <h3> Received Enquiry from user  </h3>
+        <div style="text-align: left;padding-left: 18px;font-size: larger;">
+          <%= "Name   :  " %><%= @user %>
+        </div>
+        <div style="text-align: left;padding-left: 18px;font-size:larger;">
+          <%= "Email  :  " %><%= @client_email  %>
+        </div>
+        <div style="text-align: left;padding-left: 18px;">
+          <p style="font-size:larger; ">
+            <%= "Message :  " %><%= @message%>
+          </p>
+        </div>
+      </div>
+    </div>
+  </center>
+</div>
+</body>
+</html>

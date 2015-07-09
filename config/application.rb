@@ -23,5 +23,16 @@ module Cms
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.initialize_on_precompile = true
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.delivery_method = :smtp
+    # SMTP settings for gmail
+    config.action_mailer.smtp_settings = {
+        address: 'smtp.gmail.com',
+        port: 587,
+        user_name: ENV['GMAIL_USERNAME'],
+        password: ENV['GMAIL_PASSWORD'],
+        authentication: "plain"
+    }
   end
 end
