@@ -53,6 +53,7 @@ function togg(){
         $('#header_row').hide();
         $('#header_row_1').show();
         $('#header_row_1').removeClass('hidden');
+        $('#menu .nav').css({'position': 'inherit'})
     }
     else{
 
@@ -61,6 +62,7 @@ function togg(){
         $('#menu .nav').show();
         $('#header_row').removeClass('hidden');
         rowHeight = $('#head').height();
+        $('#menu .nav').css({'position': 'absolute'})
     }
 }
 
@@ -70,6 +72,7 @@ $('.toggle').click(function(){
     {
         $('#menu .nav').hide();
         nav_show = false;
+
     }
     else{
         $('#menu .nav').css({'display': 'table','padding-left':'0', 'margin-top' : '20px'});
@@ -128,9 +131,8 @@ function fixDiv() {
         $('#menu ul li a').css({'color':'#fff'})
     }
     else{
-        rowHeight = $('#head').height();
         $('#menu ul li a').css({'color':'#000'});
-        $cache.css({'position': 'absolute','top':rowHeight + 'px','background': 'rgba(255,255,255,0.75)','border': 'none', 'margin-top': '0'});
+        $cache.css({'position': 'absolute','top':'130px','background': 'rgba(255,255,255,0.75)','border': 'none', 'margin-top': '0'});
     }
 }
 

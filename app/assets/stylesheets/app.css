@@ -426,7 +426,7 @@
     border-right: 0;
     background: rgba(255,255,255,0.75);
     overflow: visible;
-    position: absolute;
+    /*position: absolute;*/
     padding-left: 50px;
     z-index: 10000;
 }
@@ -499,6 +499,6 @@
         font-size: 1.5em;
     }
     .nav>li>a {
-        padding: 15px 15px !important;
+        padding: 10px 10px !important;
     }
 }
